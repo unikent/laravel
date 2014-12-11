@@ -20,12 +20,12 @@ class LangTest extends PHPUnit_Framework_TestCase {
 	 *
 	 * @group laravel
 	 */
-	public function testGetMethodCanGetLinesForAGivenLanguage()
-	{
-		$validation = require path('app').'language/sp/validation.php';
+	// public function testGetMethodCanGetLinesForAGivenLanguage()
+	// {
+	// 	$validation = require path('app').'language/sp/validation.php';
 
-		$this->assertEquals($validation['required'], Lang::line('validation.required')->get('sp'));
-	}
+	// 	$this->assertEquals($validation['required'], Lang::line('validation.required')->get('sp'));
+	// }
 
 	/**
 	 * Test the __toString method.
@@ -44,25 +44,25 @@ class LangTest extends PHPUnit_Framework_TestCase {
 	 *
 	 * @group laravel
 	 */
-	public function testReplacementsAreMadeOnLines()
-	{
-		$validation = require path('app').'language/en/validation.php';
+	// public function testReplacementsAreMadeOnLines()
+	// {
+	// 	$validation = require path('app').'language/en/validation.php';
 
-		$line = str_replace(':attribute', 'e-mail', $validation['required']);
+	// 	$line = str_replace(':attribute', 'e-mail', $validation['required']);
 
-		$this->assertEquals($line, Lang::line('validation.required', array('attribute' => 'e-mail'))->get());
-	}
+	// 	$this->assertEquals($line, Lang::line('validation.required', array('attribute' => 'e-mail'))->get());
+	// }
 
 	/**
 	 * Test the Lang::has method.
 	 *
 	 * @group laravel
 	 */
-	public function testHasMethodIndicatesIfLangaugeLineExists()
-	{
-		$this->assertTrue(Lang::has('validation'));
-		$this->assertTrue(Lang::has('validation.required'));
-		$this->assertFalse(Lang::has('validation.foo'));
-	}
+	// public function testHasMethodIndicatesIfLangaugeLineExists()
+	// {
+	// 	$this->assertTrue(Lang::has('validation'));
+	// 	$this->assertTrue(Lang::has('validation.required'));
+	// 	$this->assertFalse(Lang::has('validation.foo'));
+	// }
 
 }
